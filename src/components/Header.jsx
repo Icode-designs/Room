@@ -96,7 +96,6 @@ export default function Header({ navOpen, setNavOpen }) {
   function toggleMenu() {
     setNavOpen(!navOpen);
   }
-  console.log(logo);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1200px)");
@@ -134,9 +133,10 @@ export default function Header({ navOpen, setNavOpen }) {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1200) {
-        setNavOpen(true); // Open the navigation menu at 1200px or more
+        setNavOpen(true);
+        console.log(navOpen);
       } else {
-        setNavOpen(false); // Close the navigation menu below 1200px
+        setNavOpen(false);
       }
     };
 

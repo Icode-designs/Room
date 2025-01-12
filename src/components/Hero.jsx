@@ -47,7 +47,7 @@ const StyledHero = styled.section`
     overflow: hidden;
     grid-area: hero-container;
     @media (min-width: 1024px) {
-      height: 60vh;
+      height: 100%;
     }
   }
 
@@ -151,7 +151,6 @@ export default function Hero() {
                 (currentImage - 1 + images.length) % images.length;
               console.log("Prev Image:", newIndex);
               setCurrentImage(newIndex);
-              setNavOpen(false);
             }}
           >
             <FaAngleLeft className="angleIcon" />
@@ -161,7 +160,6 @@ export default function Hero() {
               const newIndex = (currentImage + 1) % images.length;
               console.log("Next Image:", newIndex);
               setCurrentImage(newIndex);
-              setNavOpen(false);
             }}
           >
             <FaAngleRight className="angleIcon" />
